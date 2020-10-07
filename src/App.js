@@ -14,7 +14,7 @@ function generateDeck() {
     let card = { isFlipped: false, symbol: symbols[i % 8] }
     deck.push(card)
   }
-  shuffle(deck)
+  deck = shuffle(deck)
   return deck
 }
 
@@ -47,7 +47,7 @@ class App extends React.Component {
   pickCard (cardIndex) {
     if(this.state.deck[cardIndex].isFlipped==true){
       return;
-    }else{
+    }
       let cardToFlip = {...this.state.deck[cardIndex]};
       cardToFlip.isFlipped = true;
       let newPickedCards = this.state.pickedCards.concat(cardIndex);
@@ -58,7 +58,7 @@ class App extends React.Component {
         return card;
       });
       this.setState({deck: newDeck, pickedCards: newPickedCards});
-    }
+    
     
   }
 
@@ -81,11 +81,6 @@ render(){
       <div>{cardsJSX.slice(4, 8)}</div>
       <div>{cardsJSX.slice(8, 12)}</div>
       <div>{cardsJSX.slice(12, 16)}</div>
-
-
-
-
-
 
 
     </div>

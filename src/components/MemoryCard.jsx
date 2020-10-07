@@ -6,18 +6,8 @@ import ReactDOM from 'react-dom';
 
 class MemoryCard extends React.Component {
     
-    constructor(props) {
-        super(props);
-        this.state = {
-            isFlipped: false
-        };
-      }
-
-    clickHandler() {
-       return this.setState({ isFlipped: !this.state.isFlipped });
-      
-    }
-    
+  
+  
     
     render() {
         let memoryCardInnerClass = 'MemoryCardInner';
@@ -27,7 +17,7 @@ class MemoryCard extends React.Component {
         this.props.isFlipped == false ? memoryCardInnerClass = memoryCardInnerClass + 'flipped' : memoryCardInnerClass = 'MemoryCardInner';
 
       return (
-        <div className="MemoryCard" onClick={() => this.clickHandler()}>
+        <div className="MemoryCard" onClick={this.props.pickCard}>
             <div className={memoryCardInnerClass}>
 
                 <div className="MemoryCardBack">
@@ -35,7 +25,7 @@ class MemoryCard extends React.Component {
                 </div>
 
                 <div className="MemoryCardFront">
-                {this.props.symbol};
+                {this.props.symbol}
                 </div>
 
             </div>
