@@ -11,10 +11,10 @@ class MemoryCard extends React.Component {
     
     render() {
         let memoryCardInnerClass = 'MemoryCardInner';
-        // if(this.state.isFlipped == false){
-        //     memoryCardInnerClass = memoryCardInnerClass + 'flipped'
-        // }
-        this.props.isFlipped == false ? memoryCardInnerClass = memoryCardInnerClass + 'flipped' : memoryCardInnerClass = 'MemoryCardInner';
+        if(this.props.isFlipped == false){
+            memoryCardInnerClass = memoryCardInnerClass + 'flipped'
+        }
+        // this.props.isFlipped == false ? memoryCardInnerClass = memoryCardInnerClass + 'flipped' : memoryCardInnerClass = 'MemoryCardInner';
 
       return (
         <div className="MemoryCard" onClick={this.props.pickCard}>
