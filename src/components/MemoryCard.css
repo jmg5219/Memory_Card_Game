@@ -1,6 +1,6 @@
 .MemoryCardBack{
     background: repeating-linear-gradient(
-  45deg,
+  20deg,
   #606dbc,
   #606dbc 10px,
   #465298 10px,
@@ -43,7 +43,7 @@ img{
 
 .MemoryCardFront{
     font-size: 30px;
-    line-height: 20px;
+    line-height: 60px;
     transform: rotateY(180deg);
 
 }
