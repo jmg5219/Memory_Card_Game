@@ -1,6 +1,14 @@
+*{
+  margin:0px;
+  padding:0px;
+}
+
 .App {
   text-align: center;
+  
 }
+
+
 
 .App-header {
   background-color: #282c34;
@@ -8,8 +16,12 @@
   font-size: calc(8px + 2vmin);
   color: white;
   height: 80px;
+  padding-top:3rem;
+  margin-bottom: 3rem;
 }
 
 .App-subtitle{
   color: #666666;
+  padding-top:3rem;
 }
+
